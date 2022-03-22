@@ -1,0 +1,62 @@
+﻿<Window x:Class="ApiMomo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ApiMomo"
+        mc:Ignorable="d"
+        Title="MainWindow" ResizeMode="NoResize" Height="799" Width="722">
+
+
+    <Grid Background="Beige">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" ></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="105" ></ColumnDefinition>
+            <ColumnDefinition ></ColumnDefinition>
+
+        </Grid.ColumnDefinitions>
+        <Image  Grid.Row="0" Source="C:\Users\ACER\Desktop\LearnCore\MomoAPI\MomoAPI\Resource\MoMo_Logo.png" RenderTransformOrigin="0.419,0.417" Grid.ColumnSpan="2" Margin="2,0,48,0">
+            <Image.Effect>
+                <DropShadowEffect Direction="24" Color="#FFB6C2CB" ShadowDepth="4" BlurRadius="4" />
+            </Image.Effect>
+        </Image>
+        <Label FontWeight="Bold" Grid.Row="1" Content="WEB PAYMENT" FontFamily="Arial"></Label>
+        <TextBox Name="txtEndPoint"  Grid.Column="1" HorizontalAlignment="Left" Margin="0,26,0,0" Grid.Row="1" TextWrapping="Wrap" Text="https://test-payment.momo.vn/v2/gateway/api/create" VerticalAlignment="Top" Width="578" Height="26"/>
+        <Label Content="End Point" HorizontalAlignment="Left" Margin="0,26,0,0" Grid.Row="1" VerticalAlignment="Top" Width="70"/>
+        <TextBox Name="txtAcessKey" Grid.Column="1" HorizontalAlignment="Left" Margin="0,69,0,0" Grid.Row="1" TextWrapping="Wrap" Text="M8brj9K6E22vXoDB" VerticalAlignment="Top" Width="578" Height="26"/>
+        <Label Content="Access Key" HorizontalAlignment="Left" Margin="0,69,0,0" Grid.Row="1" VerticalAlignment="Top" Width="70"/>
+        <TextBox Name="txtPartnerCode" Grid.Column="1" HorizontalAlignment="Left" Margin="0,116,0,0" Grid.Row="1" TextWrapping="Wrap" Text="MOMO5RGX20191128" VerticalAlignment="Top" Width="578" Height="26"/>
+        <Label Content="Partner Code" HorizontalAlignment="Left" Margin="0,116,0,0" Grid.Row="1" VerticalAlignment="Top" Width="81"/>
+        <TextBox  Name="txtAmount" Grid.Column="1" HorizontalAlignment="Left" Margin="0,161,0,0" Grid.Row="1" TextWrapping="Wrap"  VerticalAlignment="Top" Width="578" Height="26"/>
+        <Label Content="Amount" HorizontalAlignment="Left" Margin="0,161,0,0" Grid.Row="1" VerticalAlignment="Top" Width="70"/>
+        <TextBox Name="txtOrderInfo" Grid.Column="1" HorizontalAlignment="Left" Margin="0,205,0,0" Grid.Row="1" TextWrapping="Wrap"  VerticalAlignment="Top" Width="578" Height="26"/>
+        <Label Content="Order Info" HorizontalAlignment="Left" Margin="0,205,0,0" Grid.Row="1" VerticalAlignment="Top" Width="70"/>
+        <TextBox Name="txtIpnUrl" Grid.Column="1" HorizontalAlignment="Left" Margin="0,250,0,0" Grid.Row="1" TextWrapping="Wrap" Text="https://webhook.site/b3088a6a-2d17-4f8d-a383-71389a6c600b" VerticalAlignment="Top" Width="578" Height="26"/>
+        <Label Content="Ipn Url" HorizontalAlignment="Left" Margin="0,250,0,0" Grid.Row="1" VerticalAlignment="Top" Width="70"/>
+        <TextBox Name="txtRedirectUrl" Grid.Column="1" HorizontalAlignment="Left" Margin="0,292,0,0" Grid.Row="1" TextWrapping="Wrap" Text="https://webhook.site/b3088a6a-2d17-4f8d-a383-71389a6c600b" VerticalAlignment="Top" Width="578" Height="26"/>
+        <Label Content="Redirect Url" HorizontalAlignment="Left" Margin="0,292,0,0" Grid.Row="1" VerticalAlignment="Top" Width="81"/>
+        <Label FontWeight="Bold" Grid.Row="1" Content="WEB PAYMENT" FontFamily="Arial"/>
+        <Label Content="Redirect Url" HorizontalAlignment="Left" Margin="0,292,0,0" Grid.Row="1" VerticalAlignment="Top" Width="81"/>
+        <TextBox Name="txtEndPoint2" HorizontalAlignment="Left" Margin="0,10,0,0" Grid.Row="2" TextWrapping="Wrap" Text="https://test-payment.momo.vn/pay/pos" VerticalAlignment="Top" Width="578" Height="26" Grid.Column="1"/>
+        <Label Content="End Point" HorizontalAlignment="Left" Margin="-6,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="82"/>
+        <TextBox Name="txtAmount2" HorizontalAlignment="Left" Margin="0,51,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="578" Height="26" Grid.Column="1"/>
+        <Label Content="Amount" HorizontalAlignment="Left" Margin="-6,51,0,0" Grid.Row="2" VerticalAlignment="Top" Width="82"/>
+        <TextBox Name="txtPaymentCode" HorizontalAlignment="Left" Margin="0,97,0,0" Grid.Row="2" TextWrapping="Wrap" Text="MM315244796579015388" VerticalAlignment="Top" Width="578" Height="26" Grid.Column="1" />
+        <Label Content="Payment Code" HorizontalAlignment="Left" Margin="-1,97,0,0" Grid.Row="2" VerticalAlignment="Top" Width="96"/>
+        <TextBox Name="txtPublicKey" HorizontalAlignment="Left" Margin="0,144,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Redirect Url" VerticalAlignment="Top" Width="578" Height="138" Grid.Column="1" />
+        <Label Content="Public Key" HorizontalAlignment="Left" Margin="0,144,0,0" Grid.Row="2" VerticalAlignment="Top" Width="82"/>
+        <Button Name="btnQueryStatus"  Background="#c36097" Grid.Column="1" Content="Button" HorizontalAlignment="Left" Margin="247,297,0,14" Grid.Row="2" Width="74" Click="btnQueryStatus_Click" />
+        <Button Name="btn1" Background="#c36097" Grid.Column="1" Content="Button" HorizontalAlignment="Left" Margin="348,297,0,0" Grid.Row="2" VerticalAlignment="Top" Width="74" Height="30" Click="btn1_Click"/>
+        <Button Background="#c36097" Grid.Column="1" Content="Button" HorizontalAlignment="Left" Margin="460,297,0,0" Grid.Row="2" VerticalAlignment="Top" Width="74" Height="30" Click="Button_Click"/>
+        <Button Background="#c36097" Grid.Column="1" Content="Button" HorizontalAlignment="Left" Margin="146,297,0,0" Grid.Row="2" VerticalAlignment="Top" Width="74" Height="30" />
+
+
+    </Grid>
+
+</Window>
+
